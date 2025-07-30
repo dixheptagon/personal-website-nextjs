@@ -59,11 +59,10 @@ export default function SkillSection() {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center gap-2 font-medium"
+              className="flex flex-col items-center justify-center gap-2 font-medium hover:text-blue-500"
               variants={itemVariants}
               whileHover={{
-                scale: 1.15,
-                color: "#0ea5e9", // Tailwind blue-500
+                scale: 1.15, // Tailwind blue-500
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
