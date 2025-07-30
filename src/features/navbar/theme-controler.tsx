@@ -3,7 +3,7 @@ import React from "react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 import { useTheme } from "next-themes";
 
-export default function ThemeControler({ className }: { className?: string }) {
+export default function ThemeControler() {
   const { theme, setTheme } = useTheme();
 
   if (theme === "light") {

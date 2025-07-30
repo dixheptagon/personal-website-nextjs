@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function ProjectSection() {
   const projects = [
@@ -68,13 +68,13 @@ export default function ProjectSection() {
           className="text-3xl font-bold text-slate-900 md:text-4xl dark:text-slate-100"
           variants={itemVariants}
         >
-          See what I've built
+          See what I`ve built
         </motion.h2>
         <motion.p
           className="text-gray-600 dark:text-slate-400"
           variants={itemVariants}
         >
-          From concepts to reality, here's a glimpse of what I love building.
+          From concepts to reality, here`s a glimpse of what I love building.
         </motion.p>
         <motion.div variants={itemVariants}>
           <Link

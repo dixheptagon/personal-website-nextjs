@@ -5,6 +5,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export function AboutMe() {
   const timelineItems = [
@@ -60,7 +61,7 @@ export function AboutMe() {
             }}
           >
             <figure>
-              <img
+              <Image
                 src="/assets/profile-picture.webp"
                 alt="Profile Picture"
                 className="h-48 w-full scale-100 object-cover md:h-64"
@@ -91,7 +92,9 @@ export function AboutMe() {
           >
             {/* Quote (HIDE on small screen) */}
             <h2 className="mb-6 hidden text-xl font-bold text-slate-800 italic md:block md:text-3xl dark:text-slate-300">
-              "The land of peace is not found—it's built with your own hands."
+              <q>
+                The land of peace is not found, it`s built with your own hands.
+              </q>
               <br />
               <sup className="pl-2 text-sm text-slate-500">
                 - Makoto Yukimura in Vinland Saga
@@ -101,10 +104,10 @@ export function AboutMe() {
             <div className="aboutme-description flex flex-col gap-8 lg:flex-row">
               {/* Description */}
               <p className="text-base text-slate-600 md:text-lg lg:w-2/3 dark:text-slate-400">
-                Hi, I'm Forentino - a sofware engineer specializing in premium
-                web design, development, and SEO services. I'm passionate about
+                Hi, I`m Forentino - a sofware engineer specializing in premium
+                web design, development, and SEO services. I`m passionate about
                 creating unique and effective solutions for my clients, and I
-                bring a personal touch to every project. Let's work together to
+                bring a personal touch to every project. Let`s work together to
                 bring your vision to life!
               </p>
 

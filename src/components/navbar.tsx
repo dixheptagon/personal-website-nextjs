@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import ThemeControler from "@/features/navbar/theme-controler";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "#" },
@@ -36,7 +37,7 @@ export default function Navbar() {
             href="#"
             className="flex gap-2 rounded-xl p-2 text-xl font-bold dark:hover:bg-slate-200 dark:hover:text-black"
           >
-            <img
+            <Image
               src="/assets/eternity-logo.svg"
               className="rounded-xl bg-white dark:bg-slate-200"
               alt="logo"

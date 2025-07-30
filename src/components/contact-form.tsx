@@ -3,10 +3,9 @@
 import { BiChevronDown } from "react-icons/bi";
 import { motion } from "framer-motion";
 import HandleSendToWeb3Forms from "@/features/contact-form/handleSubmit";
-import React, { useRef } from "react";
+import React from "react";
 import { useFormik } from "formik";
 import { validationContactSchema } from "@/features/contact-form/schemas/validationContactSchema";
-import { IFormValues } from "@/features/contact-form/type";
 import { InputField } from "@/features/contact-form/inputField";
 import { toast } from "react-toastify";
 
@@ -24,18 +23,14 @@ export default function ContactSection() {
       { firstName, lastName, email, phoneNumber, message },
       { resetForm },
     ) => {
-      try {
-        await HandleSendToWeb3Forms({
-          firstName,
-          lastName,
-          email,
-          phoneNumber,
-          message,
-        });
-        resetForm(); // ✅ Sekarang aman dan valid di TypeScript
-      } catch (error) {
-        toast.error("Failed to send message.");
-      }
+      await HandleSendToWeb3Forms({
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        message,
+      });
+      resetForm(); // ✅ Sekarang aman dan valid di TypeScript
     },
   });
 
@@ -56,7 +51,7 @@ export default function ContactSection() {
           Contact Me
         </h2>
         <p className="mt-2 text-lg text-gray-600 dark:text-slate-400">
-          Let's discuss your project or collaboration ideas.
+          Let`s discuss your project or collaboration ideas.
         </p>
       </motion.div>
       {/* Form with Motion */}
@@ -161,7 +156,7 @@ export default function ContactSection() {
             type="submit"
             className="w-full rounded-md bg-indigo-600 px-4 py-3 font-semibold text-white hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-600 focus:outline-none"
           >
-            Let's Talk
+            Let`s Talk
           </motion.button>
         </div>
       </motion.form>

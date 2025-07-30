@@ -3,9 +3,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCircleCheck } from "react-icons/fa6";
+import { ITimelineItem } from "@/features/experience-section/type";
 
 export default function ExperienceSection() {
-  const timeline = [
+  const timeline: ITimelineItem[] = [
     {
       year: "2025",
       title: "Bootcamp at Purwadhika School",
@@ -42,7 +43,13 @@ export default function ExperienceSection() {
 }
 
 // ✅ Separate Component for Item
-function HoverTimelineItem({ item, index }: any) {
+function HoverTimelineItem({
+  item,
+  index,
+}: {
+  item: ITimelineItem;
+  index: number;
+}) {
   const [hovered, setHovered] = useState(false);
 
   return (

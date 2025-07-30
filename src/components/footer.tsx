@@ -3,6 +3,7 @@
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const footerLinks = [
   {
@@ -70,7 +71,7 @@ export default function Footer() {
           transition={{ delay: 0.45 }}
           className="flex flex-col items-center md:items-start"
         >
-          <img
+          <Image
             src="/assets/eternity-logo.svg"
             alt="Foren Logo"
             className="mb-4 h-12 w-12 rounded-xl bg-white md:h-16 md:w-16"

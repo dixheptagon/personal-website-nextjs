@@ -3,6 +3,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function TestimonialSlider() {
   const testimonials = [
@@ -75,7 +76,7 @@ export default function TestimonialSlider() {
             >
               <div className="my-2 rounded-xl bg-white p-6 shadow-md transition-all dark:bg-slate-900">
                 <div className="mb-4 flex items-center gap-4">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.name}
                     className="h-12 w-12 rounded-full object-cover"
@@ -90,7 +91,7 @@ export default function TestimonialSlider() {
                   </div>
                 </div>
                 <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
-                  "{item.text}"
+                  <q>{item.text}</q>
                 </p>
               </div>
             </motion.div>
