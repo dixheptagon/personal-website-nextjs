@@ -9,7 +9,7 @@ export default async function HandleSendToWeb3Forms({
   message,
 }: IFormValues) {
   const formData = new FormData();
-  formData.append("access_key", "8c704722-33d7-4826-85e8-94358ac8859b"); // ✅ betulin key
+  formData.append("access_key", process.env.WEB3FORMS_ACCESS_KEY!); // ✅ betulin key
   formData.append("name", firstName + " " + lastName);
   formData.append("email", email);
   formData.append("phone", phoneNumber);
@@ -22,10 +22,8 @@ export default async function HandleSendToWeb3Forms({
 
   const result = await response.json();
   if (result.success) {
-    console.log("✅ Message sent:", result);
     toast.success(`Message sent successfully from ${result?.data?.email}`);
   } else {
-    console.error("❌ Failed:", result);
     toast.error(`Failed to send message from ${result?.data?.email}`);
   }
 }

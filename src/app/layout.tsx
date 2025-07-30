@@ -34,7 +34,6 @@ export default function RootLayout({
       >
         <ThemeProvider enableSystem defaultTheme="system">
           <ToastContainer />
-          {/* <NavigationBar /> */}
           <Navbar />
           {children}
           <Footer />

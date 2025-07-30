@@ -61,9 +61,9 @@ export function AboutMe() {
           >
             <figure>
               <img
-                src="/assets/profile-picture.webp"
+                src="/assets/profile-picture."
                 alt="Profile Picture"
-                className="h-48 w-full scale-50 scale-100 object-cover md:h-64"
+                className="h-48 w-full scale-50 object-cover md:h-64"
               />
             </figure>
             <div className="card-body p-4 md:p-6">
