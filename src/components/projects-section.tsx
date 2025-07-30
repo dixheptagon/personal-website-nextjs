@@ -10,19 +10,20 @@ export default function ProjectSection() {
       title: "Simon Game",
       year: "2023",
       image: "/assets/simon-game.png",
-      category: "↳ View Details",
+      category:
+        "↳ Simon Game is an electronic memory game where the player must repeat an increasingly long sequence of lights and sounds in the correct order.",
     },
     {
-      title: "Rosewood Estate",
+      title: "Rosewood Estate - Sample",
       year: "2025",
       image: "/assets/house-2.avif",
-      category: "↳ Belum ada projectnya",
+      category: "↳ Details not available",
     },
     {
-      title: "Glass Pavilion",
+      title: "Glass Pavilion - Sample",
       year: "2025",
       image: "/assets/house-3.avif",
-      category: "↳ Belum ada projectnya",
+      category: "↳ Details not available",
     },
   ];
 
@@ -77,7 +78,7 @@ export default function ProjectSection() {
         </motion.p>
         <motion.div variants={itemVariants}>
           <Link
-            href="/projects"
+            href="#projects"
             className="text-slate-800 hover:underline dark:text-slate-100"
           >
             View projects →

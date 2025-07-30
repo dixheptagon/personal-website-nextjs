@@ -1,25 +1,5 @@
+import { toast } from "react-toastify";
 import { IFormValues } from "./type";
-
-// export default async function HandleSendToWeb3Forms(
-//   event: React.FormEvent<HTMLFormElement>,
-// ) {
-//   event.preventDefault();
-
-//   const formData = new FormData(event.currentTarget);
-//   formData.append("access_key", "8c704722-33d7-4826-85e8-94358ac8859b"); // ✅ betulin key
-
-//   const response = await fetch("https://api.web3forms.com/submit", {
-//     method: "POST",
-//     body: formData, // ✅ jangan JSON
-//   });
-
-//   const result = await response.json();
-//   if (result.success) {
-//     console.log("✅ Message sent:", result);
-//   } else {
-//     console.error("❌ Failed:", result);
-//   }
-// }
 
 export default async function HandleSendToWeb3Forms({
   firstName,
@@ -41,10 +21,11 @@ export default async function HandleSendToWeb3Forms({
   });
 
   const result = await response.json();
-
   if (result.success) {
     console.log("✅ Message sent:", result);
+    toast.success(`Message sent successfully from ${result?.data?.email}`);
   } else {
     console.error("❌ Failed:", result);
+    toast.error(`Failed to send message from ${result?.data?.email}`);
   }
 }

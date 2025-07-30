@@ -4,6 +4,8 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "next-themes";
+import { ToastContainer } from "react-toastify";
+import MobileThemeControler from "@/features/navbar/mobile-theme-controler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,10 +33,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} dark:text-slate-100" bg-white text-gray-800 antialiased dark:bg-slate-950`}
       >
         <ThemeProvider enableSystem defaultTheme="system">
+          <ToastContainer />
           {/* <NavigationBar /> */}
           <Navbar />
           {children}
           <Footer />
+          <MobileThemeControler />
         </ThemeProvider>
       </body>
     </html>

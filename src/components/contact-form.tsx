@@ -3,41 +3,14 @@
 import { BiChevronDown } from "react-icons/bi";
 import { motion } from "framer-motion";
 import HandleSendToWeb3Forms from "@/features/contact-form/handleSubmit";
-import React from "react";
+import React, { useRef } from "react";
 import { useFormik } from "formik";
 import { validationContactSchema } from "@/features/contact-form/schemas/validationContactSchema";
 import { IFormValues } from "@/features/contact-form/type";
 import { InputField } from "@/features/contact-form/inputField";
+import { toast } from "react-toastify";
 
 export default function ContactSection() {
-  const onHandleContact = async ({
-    firstName,
-    lastName,
-    email,
-    phoneNumber,
-    message,
-  }: IFormValues) => {
-    try {
-      const response = await HandleSendToWeb3Forms({
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-        message,
-      });
-
-      console.log("🚀 ~ onHandleContact- success", {
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-        message,
-      });
-    } catch (error) {
-      console.log("🚀 ~ onHandleContact ~ error", error);
-    }
-  };
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -47,8 +20,22 @@ export default function ContactSection() {
       message: "",
     },
     validationSchema: validationContactSchema,
-    onSubmit: ({ firstName, lastName, email, phoneNumber, message }) => {
-      onHandleContact({ firstName, lastName, email, phoneNumber, message });
+    onSubmit: async (
+      { firstName, lastName, email, phoneNumber, message },
+      { resetForm },
+    ) => {
+      try {
+        await HandleSendToWeb3Forms({
+          firstName,
+          lastName,
+          email,
+          phoneNumber,
+          message,
+        });
+        resetForm(); // ✅ Sekarang aman dan valid di TypeScript
+      } catch (error) {
+        toast.error("Failed to send message.");
+      }
     },
   });
 

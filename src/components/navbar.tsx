@@ -24,7 +24,7 @@ export default function Navbar() {
     <div className="bg-base-100/80 fixed top-0 left-0 z-50 w-full shadow-sm backdrop-blur-sm dark:bg-slate-900/80 dark:text-slate-100">
       <div className="navbar mx-auto max-w-7xl px-4">
         {/* Mobile: Left Toggle */}
-        <div className="navbar-start lg:hidden">
+        <div className="navbar-start flex gap-2 lg:hidden">
           <button onClick={toggleMenu} className="btn btn-primary text-xl">
             {isMobileOpen ? <FaXmark /> : <FaBars />}
           </button>
@@ -65,7 +65,9 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <div className="navbar-end flex gap-5">
-          <ThemeControler />
+          <div className="hidden md:block">
+            <ThemeControler />
+          </div>
           <Link href="#contact" className="btn btn-primary font-bold">
             ● Book a call
           </Link>

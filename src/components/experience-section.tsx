@@ -11,7 +11,7 @@ export default function ExperienceSection() {
       title: "Bootcamp at Purwadhika School",
       description:
         "Purwadhika Bootcamp is one of Indonesia's most well-known coding bootcamps, In almost 6 month I was driven to become a Fullstack Web Developer.",
-      link: "#",
+      link: "https://purwadhika.com/",
     },
   ];
 
@@ -111,6 +111,7 @@ function HoverTimelineItem({ item, index }: any) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.3 }}
+            target="_blank"
             className="absolute right-4 bottom-2 rounded-lg bg-slate-800 px-4 py-2 text-white shadow-md hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600"
           >
             View Details →
