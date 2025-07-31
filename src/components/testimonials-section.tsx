@@ -79,6 +79,8 @@ export default function TestimonialSlider() {
                   <Image
                     src={item.image}
                     alt={item.name}
+                    width={48}
+                    height={48}
                     className="h-12 w-12 rounded-full object-cover"
                   />
                   <div className="text-left">

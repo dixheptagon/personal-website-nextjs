@@ -64,6 +64,8 @@ export function AboutMe() {
               <Image
                 src="/assets/profile-picture.webp"
                 alt="Profile Picture"
+                width={100}
+                height={100}
                 className="h-48 w-full scale-100 object-cover md:h-64"
               />
             </figure>

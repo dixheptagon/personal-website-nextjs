@@ -74,6 +74,8 @@ export default function Footer() {
           <Image
             src="/assets/eternity-logo.svg"
             alt="Foren Logo"
+            width={50}
+            height={50}
             className="mb-4 h-12 w-12 rounded-xl bg-white md:h-16 md:w-16"
           />
           <p className="text-center text-sm leading-relaxed md:text-left">
