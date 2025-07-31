@@ -9,7 +9,7 @@ export default async function HandleSendToWeb3Forms({
   message,
 }: IFormValues) {
   const formData = new FormData();
-  formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY!); // ✅ betulin key
+  formData.append("access_key", process.env.WEB3FORMS_ACCESS_KEY!); // ✅ betulin key
   formData.append("name", firstName + " " + lastName);
   formData.append("email", email);
   formData.append("phone", phoneNumber);
