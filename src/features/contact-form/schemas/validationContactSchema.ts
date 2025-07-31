@@ -10,6 +10,12 @@ export const validationContactSchema = yup.object().shape({
     .required("Last Name is required")
     .max(25, "Last Name must be at most 25 characters long"),
   email: yup.string().email("Invalid email").required("Email is required"),
-  phoneNumber: yup.string().required("Phone Number is required").min(10),
+  phoneNumber: yup
+    .string()
+    .required("Phone Number is required")
+    .matches(
+      /^[0-9]{10,15}$/,
+      "Phone Number must contain only digits (10-15 characters)",
+    ),
   message: yup.string().required("Message is required"),
 });
