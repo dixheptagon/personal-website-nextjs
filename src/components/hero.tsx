@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -75,7 +76,7 @@ export function HeroSection() {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            ● Book a Call
+            <Link href={"#contact"}> ● Book a Call</Link>
           </motion.button>
 
           <motion.button
@@ -84,7 +85,7 @@ export function HeroSection() {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            View work →
+            <Link href={"#projects"}> View work →</Link>
           </motion.button>
         </motion.div>
       </motion.div>
