@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="navbar-center lg:navbar-start">
           <Link
             href="#"
-            className="flex gap-2 rounded-xl p-2 text-xl font-bold dark:hover:bg-slate-200 dark:hover:text-black"
+            className="hidden gap-2 rounded-xl p-2 text-xl font-bold md:flex dark:hover:bg-slate-200 dark:hover:text-black"
           >
             <Image
               src="/assets/eternity-logo.svg"

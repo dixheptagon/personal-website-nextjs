@@ -111,7 +111,7 @@ export default function ProjectSection() {
               />
             </div>
             {/* Overlay Text */}
-            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-4 text-white opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
               <h3 className="text-lg font-semibold">{project.title}</h3>
               <span className="text-sm">{project.category}</span>
               <span className="text-xs text-gray-300">{project.year}</span>

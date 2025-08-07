@@ -11,7 +11,7 @@ export default function ThemeControler() {
       <div className="bg-base-200 rounded-full p-2 shadow-lg">
         <IoSunnyOutline
           onClick={() => setTheme("dark")}
-          className="hover:text-primary h-8 w-8 fill-current transition-all duration-300 hover:cursor-pointer"
+          className="text-primary h-8 w-8 fill-current transition-all duration-300 hover:cursor-pointer"
         />
       </div>
     );
@@ -20,7 +20,7 @@ export default function ThemeControler() {
       <div className="bg-base-200 rounded-full p-2 shadow-lg">
         <IoMoonOutline
           onClick={() => setTheme("light")}
-          className="hover:text-primary h-8 w-8 fill-current transition-all duration-300 hover:cursor-pointer"
+          className="text-primary h-8 w-8 fill-current transition-all duration-300 hover:cursor-pointer"
         />
       </div>
     );
